@@ -1,119 +1,112 @@
----
+# Assignment 7: Effective AI Agents using LangGraph and CrewAI
 
-# 📚 Effective AI Agents - Assignment 7
+## 📚 Overview
 
-This repository demonstrates the implementation of agent design patterns using **LangGraph** and **CrewAI** frameworks, inspired by the principles taught in the "Building Effective Agents" course.
+This project demonstrates multiple **effective AI agent design patterns** using **LangGraph** and **CrewAI** frameworks.  
+It covers three major patterns:
+- Tool-Using Agents
+- Sequential Workflow Agents
+- Branching Router Agents
 
-The assignment showcases three essential agent design patterns — implemented both using **LangGraph API** and **CrewAI** — along with LangSmith tracing and a complete video walkthrough.
+Both frameworks are used to implement each pattern separately, using **free models** hosted on Hugging Face and Together AI.
 
----
-
-## 🛠️ Patterns Implemented
-
-| # | Pattern | LangGraph Colab | CrewAI Colab |
-|:-|:---|:---|:---|
-| 1 | Simple Tool-Using Agent | [1_tool_using_agent_langgraph.ipynb](colabs/1_tool_using_agent_langgraph.ipynb) | [2_tool_using_agent_crewai.ipynb](colabs/2_tool_using_agent_crewai.ipynb) |
-| 2 | Sequential Workflow Agent | [3_sequential_workflow_langgraph.ipynb](colabs/3_sequential_workflow_langgraph.ipynb) | [4_sequential_workflow_crewai.ipynb](colabs/4_sequential_workflow_crewai.ipynb) |
-| 3 | Multi-Agent Collaboration | [5_multi_agent_collab_langgraph.ipynb](colabs/5_multi_agent_collab_langgraph.ipynb) | [6_multi_agent_collab_crewai.ipynb](colabs/6_multi_agent_collab_crewai.ipynb) |
-
-Each pattern demonstrates:
-- 🧠 Agent architecture
-- ⚡ Tool usage
-- 🔀 Workflow design
-- 🔍 Debugging and tracing with LangSmith
+All code is executed and demonstrated in Google Colab notebooks.
 
 ---
 
-## 🎥 Full Walkthrough Video
+## ⚙️ Frameworks and Models Used
 
-📺 **Watch the complete working demo and debug trace recording here:**  
-👉 [YouTube Video Walkthrough Link](https://youtube.com/your-uploaded-video-link)
+| Framework | Purpose | Model Used |
+|:---|:---|:---|
+| LangGraph | Build flexible agent workflows | HuggingFaceHub (small free models) |
+| CrewAI | Organize agents into structured teams and tasks | Together AI free model (`arcee-ai/arcee-blitz`) |
 
-- Demonstrates agent runs
-- Shows LangSmith trace for each pattern
-- Explains design decisions
-
-*(Video uploaded as Unlisted for assignment submission.)*
-
----
-
-## 🔍 LangSmith Debug Traces
-
-Each agent execution has been traced and monitored using **LangSmith Studio** for deeper visibility:
-
-| Pattern | Trace Link |
-|:---|:---|
-| Tool-Using Agent | [LangSmith Trace](https://smith.langchain.com/projects/your-tool-using-trace) |
-| Sequential Workflow Agent | [LangSmith Trace](https://smith.langchain.com/projects/your-sequential-workflow-trace) |
-| Multi-Agent Collaboration | [LangSmith Trace](https://smith.langchain.com/projects/your-multi-agent-collab-trace) |
-
-Traces include:
-- Tool usage steps
-- Model reasoning
-- Error handling (if any)
+- No OpenAI API keys are needed.
+- Only free-tier Hugging Face and Together services are used.
 
 ---
 
-## 📂 Repository Structure
+## 🛠 Setup Instructions (Colab)
 
-```bash
-effective-ai-agents-patterns/
-│
-├── colabs/
-│   ├── 1_tool_using_agent_langgraph.ipynb
-│   ├── 2_tool_using_agent_crewai.ipynb
-│   ├── 3_sequential_workflow_langgraph.ipynb
-│   ├── 4_sequential_workflow_crewai.ipynb
-│   ├── 5_multi_agent_collab_langgraph.ipynb
-│   └── 6_multi_agent_collab_crewai.ipynb
-│
-├── videos/
-│   └── assignment7_walkthrough.mp4
-│
-├── readme_files/  # Optional (screenshots, sample outputs)
-│
-└── README.md
-```
+No installation needed locally.  
+Each Colab automatically installs required packages:
+- `langgraph`
+- `langchain-core`
+- `langchain-community`
+- `crewai`
+- `together`
+- Other minimal dependencies as needed.
+
+**Authentication:**  
+- HuggingFace free API key for Hugging Face models
+- Together AI free API key for Together models
 
 ---
 
-## 🛠️ How to Reproduce (Optional for Viewers)
+## 🛤️ Project Structure and Links
 
-If you want to run the notebooks yourself:
+Each Colab demonstrates a specific pattern with a different framework:
 
-```bash
-# Install necessary libraries
-pip install langgraph langchain openai crewai langsmith
-
-# Set your API keys in environment variables
-export LANGCHAIN_API_KEY=your-key
-export HUGGINGFACEHUB_API_TOKEN=your-token
-```
-
-Or simply run the provided Google Colabs.
+| Pattern | Framework | Notebook Link |
+|:---|:---|:---|
+| Tool-Using Agent | LangGraph | [Colab 1](https://colab.research.google.com/drive/16bn0w9c8-kzW1GkrmKqmcUx6iKBVCB4a?usp=sharing) |
+| Tool-Using Agent | CrewAI | [Colab 2](https://colab.research.google.com/drive/1oH0aFwLfpnWimidkFS-6CCGz0UZq7rbo?usp=sharing) |
+| Sequential Workflow Agent | LangGraph | [Colab 3](https://colab.research.google.com/drive/1cxLFmVHHnt7rBmYCLwpwUP-vK4mzFrAW?usp=sharing) |
+| Sequential Workflow Agent | CrewAI | [Colab 4](https://colab.research.google.com/drive/1RGPNIQdVxwjT2SbXbMSAQGdJuiyUqevh?usp=sharing) |
+| Branching Router Agent | LangGraph | [Colab 5](https://colab.research.google.com/drive/1LZetSxPpdaLBc48nplKrkfMfhgRU-oqR?usp=sharing) |
+| Branching Router Agent | CrewAI | [Colab 6](https://colab.research.google.com/drive/11PlxjbVMRttzmmRaADYTN29kt9GrjFs5?usp=sharing) |
 
 ---
 
-## 📑 References
+## 🧠 Patterns Explained
 
-- [LangGraph Tutorials](https://langchain-ai.github.io/langgraph/tutorials/workflows)
-- [CrewAI Documentation](https://docs.crewai.com/)
-- [Building Effective Agents - YouTube](https://www.youtube.com/watch?v=aHCDrAbH_go)
-- [DeepLearning.AI LangGraph Short Course](https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/)
-- [LangSmith Studio](https://smith.langchain.com/)
+### 1. Tool-Using Agents
+Agents that leverage external tools (like simple calculators) to enhance their abilities.
 
----
-
-# 📈 Highlights
-- Used **LangGraph StateGraph** and **CrewAI Roles** for pattern modeling
-- Integrated **LangSmith** for complete agent tracing and debugging
-- Designed lightweight tools and workflows for clarity
-- Recorded a full video walkthrough with both execution and trace explanation
+**Highlights:**
+- LangGraph version: Built a basic tool-calling workflow.
+- CrewAI version: Used free TogetherAI LLM to simulate tool-based tasks.
 
 ---
 
-# 🚀 Submission Info
+### 2. Sequential Workflow Agents
+Agents working in a pipeline where output of one agent is input for the next.
 
-**Submitted GitHub URL:** [https://github.com/your-repo-link](https://github.com/your-repo-link)
+**Highlights:**
+- LangGraph version: Modeled sequential flow using nodes.
+- CrewAI version: Created multiple agents and tasks in a strict order.
+
+---
+
+### 3. Branching Router Agents
+Agents dynamically route tasks based on input content (e.g., numbers vs text).
+
+**Highlights:**
+- LangGraph version: Created conditional edge workflows (dynamic branching).
+- CrewAI version: Dynamically assigned tasks based on input type.
+
+---
+
+## 🎥 Video Walkthrough
+
+➡️ [YouTube Video Link (Insert Here)]()
+
+_(Placeholder: YouTube video link once recorded.)_
+
+The video will cover:
+- Overview of each pattern
+- Step-by-step walkthrough of each Colab
+- Demo of agent executions and outputs
+- Summary of frameworks and models used
+
+---
+
+## 📬 Submission Summary
+
+- 6 Colab notebooks uploaded
+- Comprehensive README included
+- Full video walkthrough recorded
+- Free model usage (no paid APIs)
+- Correct execution traces and outputs
 
 ---
